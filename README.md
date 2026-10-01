@@ -1,28 +1,88 @@
-# Kbella Flor
+# Kbella Flor Floricultura
 
-Site institucional e catálogo digital da Kbella Flor Floricultura, Balneário Rincão — SC.
+Site institucional e catálogo digital desenvolvido pela **Mantovani SYS** para a Kbella Flor Floricultura, em Balneário Rincão — SC.
 
-## Desenvolvimento
+## Site
+
+- GitHub Pages: https://mantovanip.github.io/kbella-flor/
+- Repositório: https://github.com/mantovanip/kbella-flor
+- Google Maps: https://www.google.com/maps/place/Kbella+Flor+Floricultura/
+
+## Informações do negócio
+
+- **Nome:** Kbella Flor Floricultura
+- **Segmento:** Floricultura, presentes e jardinagem
+- **Localização:** SC-445 / Rodovia Paulino Búrigo, Pedreiras, Balneário Rincão — SC
+- **Referência:** próximo ao Abimar Supermercados
+- **WhatsApp:** (48) 99679-3616
+- **Instagram:** @kbellaflorfloricultura
+- **Instagram:** @kbellaflorfloricultura2
+
+## Conteúdo do site
+
+- Apresentação institucional
+- Catálogo de flores e presentes
+- Cestas de café da manhã
+- Plantas ornamentais
+- Produtos para jardinagem
+- Pedras e terra adubada
+- Chamadas para WhatsApp
+- Localização e rota pelo Google Maps
+- Conteúdo orientado a buscas locais
+- Layout responsivo para celular e desktop
+
+## Tecnologias
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Lucide React
+- GitHub Actions
+- GitHub Pages
+
+## Desenvolvimento local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+Build de produção:
 
 ```bash
 npm run build
 ```
 
-## Informações utilizadas
+## Publicação
 
-- SC-445, Pedreiras, Balneário Rincão — SC
-- Google Maps: Kbella Flor Floricultura
-- Telefone: (48) 3468-5018
-- Contatos encontrados em fontes públicas: (48) 99679-3616, (48) 99815-2507, (48) 99841-0454
-- Instagram: @kbellaflorfloricultura e @kbellaflorfloricultura2
-- Avaliação reportada na pesquisa: 4,4/5 com 16 avaliações
-- Horário informado nas redes pesquisadas: segunda a sábado, 08h às 20h
+O projeto utiliza **GitHub Pages**. Todo push na branch `main` executa o workflow:
 
-Dados sujeitos a confirmação pela empresa antes da publicação definitiva.
+```
+GitHub
+  ↓
+GitHub Actions
+  ↓
+npm install
+  ↓
+npm run build
+  ↓
+dist
+  ↓
+GitHub Pages
+```
+
+O `vite.config.js` utiliza:
+
+```js
+base: "/kbella-flor/"
+```
+
+## Observação
+
+Este projeto foi desenvolvido inicialmente como **apresentação demonstrativa pela Mantovani SYS**. Informações comerciais, horários, produtos, imagens e contatos devem ser confirmados pela empresa antes de uma publicação definitiva.
+
+---
+
+**Mantovani SYS**  
+https://mantovanisys.com.br

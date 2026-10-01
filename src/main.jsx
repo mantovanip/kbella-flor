@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { MapPin, Phone, Instagram, MessageCircle, Flower2, Gift, Sprout, TreePine, Heart, ArrowRight, Clock3, Star, Menu, X, ChevronRight } from 'lucide-react';
 import './styles.css';
 
-const WA = '5548998152507';
+const WA = '5548996793616';
 const mapsUrl = 'https://www.google.com/maps/place/Kbella+Flor+Floricultura/@-28.80407,-49.2477869,17z/data=!4m8!3m7!1s0x9523d658f3ac71e1:0xc64f4d6f0bd892c1!8m2!3d-28.80407!4d-49.245212!9m1!1b1!16s%2Fg%2F11c2p1zt67';
 
 function whatsapp(message) {
@@ -19,9 +19,12 @@ const products = [
 
 function App() {
   const [open, setOpen] = React.useState(false);
+  const [showTop, setShowTop] = React.useState(false);
+  React.useEffect(() => { const onScroll = () => setShowTop(window.scrollY > 500); window.addEventListener('scroll', onScroll); return () => window.removeEventListener('scroll', onScroll); }, []);
 
   return (
     <div className="site">
+      <div className="demo-alert" role="status"><strong>DEMONSTRATIVO</strong><span>Este site é uma apresentação demonstrativa desenvolvida pela Mantovani SYS para a Kbella Flor.</span><button onClick={(e) => e.currentTarget.parentElement.remove()} aria-label="Fechar aviso"><X size={15}/></button></div>
       <header className="header">
         <div className="container nav">
           <a href="#inicio" className="brand" onClick={() => setOpen(false)}>
@@ -141,6 +144,7 @@ function App() {
         </section>
 
         <section className="location">
+          <div className="container map-block"><div className="map-copy"><span className="kicker">Nossa localização</span><h2>Estamos aqui.</h2><p>SC-445, Pedreiras, Balneário Rincão — SC, próxima ao Abimar Supermercados.</p><a className="button outline" href={mapsUrl} target="_blank" rel="noreferrer">Abrir rota no Google Maps <ArrowRight size={17}/></a></div><div className="map-frame"><iframe title="Mapa da Kbella Flor Floricultura" src="https://www.google.com/maps?q=Kbella%20Flor%20Floricultura%2C%20Balne%C3%A1rio%20Rinc%C3%A3o%2C%20SC&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe></div></div>
           <div className="container location-grid">
             <div><span className="kicker">Onde encontrar</span><h2>Venha conhecer a Kbella.</h2><p><b>SC-445, Pedreiras</b><br/>Balneário Rincão — SC<br/><small>Próxima ao Abimar Supermercados</small></p><a className="button outline" href={mapsUrl} target="_blank" rel="noreferrer">Abrir no Google Maps <ArrowRight size={17}/></a></div>
             <div className="hours"><div className="hours-icon"><Clock3/></div><span>Horário informado nas redes</span><strong>Segunda a sábado</strong><b>08h às 20h</b><small>Confirme a disponibilidade antes de sair.</small></div>
@@ -154,8 +158,9 @@ function App() {
           <div className="footer-info"><span>SC-445 • Pedreiras • Balneário Rincão — SC</span><span>(48) 3468-5018</span></div>
           <div className="footer-links"><a href="https://instagram.com/kbellaflorfloricultura" target="_blank" rel="noreferrer"><Instagram size={17}/> @kbellaflorfloricultura</a><a href={whatsapp('Olá! Gostaria de falar com a Kbella Flor.')} target="_blank" rel="noreferrer"><MessageCircle size={17}/> WhatsApp</a></div>
         </div>
-        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Kbella Flor Floricultura. Todos os direitos reservados.</span><span>Flores • Presentes • Jardins</span></div>
+        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Kbella Flor Floricultura. Todos os direitos reservados.</span><span>Flores • Presentes • Jardins</span><span>Desenvolvido por <a href="https://mantovanisys.com.br" target="_blank" rel="noreferrer">Mantovani SYS</a></span></div>
       </footer>
+      <a className="floating-top" href="#inicio" aria-label="Voltar ao topo" style={{display: showTop ? "grid" : "none"}}>↑</a>
       <a className="floating-wa" href={whatsapp('Olá! Vim pelo site da Kbella Flor.')} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><MessageCircle size={25}/></a>
     </div>
   );

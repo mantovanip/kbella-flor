@@ -1,43 +1,47 @@
 # Kbella Flor Floricultura
 
-Site institucional e catálogo digital desenvolvido pela **Mantovani SYS** para a Kbella Flor Floricultura, em Balneário Rincão — SC.
+> Site institucional e catálogo digital desenvolvido pela **Mantovani SYS** para a Kbella Flor Floricultura, em Balneário Rincão — SC.
 
-## Site
+## Visão geral
 
-- GitHub Pages: https://mantovanip.github.io/kbella-flor/
-- Repositório: https://github.com/mantovanip/kbella-flor
-- Google Maps: https://www.google.com/maps/place/Kbella+Flor+Floricultura/
+Aplicação web criada para apresentar a floricultura, seus produtos, categorias e canais de atendimento em uma experiência responsiva.
 
-## Informações do negócio
+## Recursos implementados
 
-- **Nome:** Kbella Flor Floricultura
-- **Segmento:** Floricultura, presentes e jardinagem
-- **Localização:** SC-445 / Rodovia Paulino Búrigo, Pedreiras, Balneário Rincão — SC
-- **Referência:** próximo ao Abimar Supermercados
-- **WhatsApp:** (48) 99679-3616
-- **Instagram:** @kbellaflorfloricultura
-- **Instagram:** @kbellaflorfloricultura2
-
-## Conteúdo do site
-
-- Apresentação institucional
-- Catálogo de flores e presentes
+- Site institucional
+- Catálogo digital
+- Flores e presentes
 - Cestas de café da manhã
 - Plantas ornamentais
 - Produtos para jardinagem
 - Pedras e terra adubada
 - Chamadas para WhatsApp
-- Localização e rota pelo Google Maps
+- Localização e rota
+- Google Maps
 - Conteúdo orientado a buscas locais
-- Layout responsivo para celular e desktop
+- Layout responsivo
+- Interface com Lucide React
+- Build de produção
 
-## Tecnologias
+## Informações
 
-- React
+| Item | Informação |
+|---|---|
+| Empresa | Kbella Flor Floricultura |
+| Segmento | Floricultura, presentes e jardinagem |
+| Região | Balneário Rincão — SC |
+| WhatsApp | (48) 99679-3616 |
+| Instagram | @kbellaflorfloricultura / @kbellaflorfloricultura2 |
+
+## Stack
+
+- React 19
 - Vite
 - JavaScript
-- CSS
+- TypeScript
+- React DOM
 - Lucide React
+- CSS
 - GitHub Actions
 - GitHub Pages
 
@@ -46,24 +50,16 @@ Site institucional e catálogo digital desenvolvido pela **Mantovani SYS** para 
 ```bash
 npm install
 npm run dev
-```
-
-Build de produção:
-
-```bash
 npm run build
+npm run preview
 ```
 
 ## Publicação
 
-O projeto utiliza **GitHub Pages**. Todo push na branch `main` executa o workflow:
-
-```
+```text
 GitHub
   ↓
 GitHub Actions
-  ↓
-npm install
   ↓
 npm run build
   ↓
@@ -72,17 +68,25 @@ dist
 GitHub Pages
 ```
 
-O `vite.config.js` utiliza:
+Base path:
 
-```js
-base: "/kbella-flor/"
+```text
+/kbella-flor/
 ```
 
-## Observação
+## Autoria
 
-Este projeto foi desenvolvido inicialmente como **apresentação demonstrativa pela Mantovani SYS**. Informações comerciais, horários, produtos, imagens e contatos devem ser confirmados pela empresa antes de uma publicação definitiva.
+**Desenvolvimento, arquitetura, design e implementação**
+
+### Paulo Mantovani — Mantovani SYS
+
+GitHub: https://github.com/mantovanip  
+Site: https://mantovanisys.com.br
+
+## Status
+
+Projeto ativo e sujeito à validação/atualização das informações comerciais.
 
 ---
 
-**Mantovani SYS**  
-https://mantovanisys.com.br
+**Mantovani SYS · Desenvolvimento Web**

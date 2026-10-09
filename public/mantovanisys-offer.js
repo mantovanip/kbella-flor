@@ -1,6 +1,6 @@
 (() => {
   const SESSION_KEY = 'kbella-mantovanisys-offer-seen';
-  const DELAY = 15000;
+  const DELAY = 6000;
   const MANTOVANI_WA = '5548999557822';
 
   if (sessionStorage.getItem(SESSION_KEY)) return;
